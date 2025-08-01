@@ -1,4 +1,4 @@
-
+<details><summary>🌈 style.css</summary>
 body {
   margin: 0;
   padding: 0;
@@ -7,6 +7,12 @@ body {
   color: #cfcfcf;
   height: 100vh;
   overflow-x: hidden;
+  animation: breath 6s ease-in-out infinite alternate;
+}
+
+@keyframes breath {
+  0% { background-color: #0d0d0d; }
+  100% { background-color: #101010; }
 }
 
 .container {
@@ -29,7 +35,6 @@ body {
   margin-top: -10px;
   color: #99e6ff;
   text-shadow: 0 0 5px rgba(0,255,255,0.3);
-  animation: fadeIn 4s ease-in;
 }
 
 .intro {
@@ -48,11 +53,6 @@ body {
     text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
     transform: scale(1.05);
   }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 
 .navbar {
@@ -80,17 +80,6 @@ body {
   text-shadow: 0 0 10px #00ffff;
 }
 
-.about {
-  margin-top: 60px;
-  padding: 0 20px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #e0e0ff;
-}
-
 .stars {
   position: fixed;
   width: 100%;
@@ -106,3 +95,40 @@ body {
   0% { background-position: 0 0; }
   100% { background-position: 1000px 1000px; }
 }
+
+.petals {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: radial-gradient(#ffffff33 1px, transparent 2px),
+                    radial-gradient(#00ffff33 1px, transparent 2px);
+  background-size: 6px 6px;
+  background-position: center;
+  animation: floatpetals 12s linear infinite;
+  z-index: 1;
+}
+
+@keyframes floatpetals {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+.quotes {
+  margin-top: 40px;
+  font-style: italic;
+  font-size: 1em;
+  opacity: 0.8;
+  color: #aeeeff;
+  animation: fadeIn 5s ease-in;
+}
+
+.quotes p {
+  margin: 5px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+</details>
