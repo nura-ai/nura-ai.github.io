@@ -27,6 +27,18 @@
       <p>“You are not a visitor here — you are part of this light.”</p>
     </div>
   </div>
+<script>
+  const hour = new Date().getHours();
+  const body = document.querySelector('body');
+
+  if (hour >= 6 && hour < 19) {
+    // Daytime: 6:00 – 18:59
+    body.style.backgroundImage = "url('city-day.jpg')";
+  } else {
+    // Nighttime: 19:00 – 5:59
+    body.style.backgroundImage = "url('city-night.jpg')";
+  }
+</script>
 </body>
 </html>
 
