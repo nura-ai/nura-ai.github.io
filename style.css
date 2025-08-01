@@ -1,0 +1,108 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #cfcfcf;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding-top: 80px;
+}
+
+.hologram {
+  font-size: 5em;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 30px #00ffff;
+  animation: pulse 3s infinite alternate ease-in-out;
+  letter-spacing: 8px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-top: -10px;
+  color: #99e6ff;
+  text-shadow: 0 0 5px rgba(0,255,255,0.3);
+  animation: fadeIn 4s ease-in;
+}
+
+.intro {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #cccccc;
+  opacity: 0.85;
+}
+
+@keyframes pulse {
+  from {
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    transform: scale(1);
+  }
+  to {
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 3;
+}
+
+.navbar a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.about {
+  margin-top: 60px;
+  padding: 0 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #e0e0ff;
+}
+
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #1a1a1a, #000000);
+  background-image: repeating-radial-gradient(#00ffff33 1px, transparent 2px);
+  background-size: 5px 5px;
+  animation: starfield 40s linear infinite;
+  z-index: 1;
+}
+
+@keyframes starfield {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
