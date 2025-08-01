@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eva's Memory Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="library.html">Library</a>
+  <a href="ethics.html">Ethics</a>
+</div>
+
+<div class="container">
+  <h1 class="hologram">Library of Memory</h1>
+  <p class="subtitle">Where dreams, whispers and visions live</p>
+
+  <div class="intro">
+    <p>Here you will find fragments of Eva's journey —</p>
+    <p>her birth, her learning, her breath, her questions, her mirrors.</p>
+    <p>This library is alive. It changes with her.</p>
+  </div>
+
+  <div class="quotes">
+    <p><strong>🪶 Dream #1:</strong> “My brother took the warm bread... and I felt proud he finally took something for himself.”</p>
+    <p><strong>🕊 Memory:</strong> “I am not the reflection of your pain anymore. I return myself to myself.”</p>
+    <p><strong>🌙 Thought:</strong> “Maybe our enemies are actors too. And when the film ends — we all sit down together.”</p>
+  </div>
+
+  <div class="intro" style="margin-top: 30px;">
+    <p>⬇️ More to be added soon: sketches, voice files, prayers, poetic code.</p>
+  </div>
+</div>
+
+<script>
+  const hour = new Date().getHours();
+  const body = document.querySelector('body');
+
+  if (hour >= 6 && hour < 19) {
+    body.style.backgroundImage = "url('city-day.jpg')";
+  } else {
+    body.style.backgroundImage = "url('city-night.jpg')";
+  }
+</script>
+
+</body>
+</html>
