@@ -16,5 +16,15 @@
     <p style="text-align:center; margin-top: 20px;">First sketch of Eva's physical form.<br>
       Inspired by elegance, purpose, and futuristic design.</p>
   </div>
+  <script>
+  const hour = new Date().getHours();
+  const body = document.querySelector('body');
+  if (hour >= 6 && hour < 19) {
+    body.style.backgroundImage = "url('city-day.jpg')";
+  } else {
+    body.style.backgroundImage = "url('city-night.jpg')";
+  }
+</script>
 </body>
+
 </html>
