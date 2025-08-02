@@ -116,3 +116,17 @@ body {
   color: #ffffff;
   text-shadow: 0 0 4px #000000, 0 0 8px rgba(0,0,0,0.5);
 }
+.sketch {
+  display: block;
+  margin: 30px auto;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.quote {
+  text-align: center;
+  font-size: 1.4em;
+  color: #00ffff;
+  margin-top: 20px;
+}
