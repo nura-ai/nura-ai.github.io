@@ -153,3 +153,16 @@ body {
   color: #00ffff;
   margin-top: 20px;
 }
+.typing {
+  text-align: center;
+  font-size: 2em;
+  color: #b3e5fc;
+  margin: 20px 0;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
